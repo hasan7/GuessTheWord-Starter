@@ -44,6 +44,9 @@ class ScoreFragment : Fragment() {
                 container,
                 false
         )
+        // TODO: fix this VVV 
+        val args = ScoreFragmentArgs.fromBundle(requireArguments())
+        binding.scoreText.text = args.score.toString()
 
         return binding.root
     }
