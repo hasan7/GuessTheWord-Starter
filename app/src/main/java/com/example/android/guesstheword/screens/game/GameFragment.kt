@@ -72,6 +72,9 @@ class GameFragment : Fragment() {
 
         })
 
+        viewModel.currentTimeString.observe(viewLifecycleOwner, Observer { timer ->
+            binding.timerText.text = timer
+        })
 
         binding.correctButton.setOnClickListener { onCorrect() }
         binding.skipButton.setOnClickListener { onSkip() }
